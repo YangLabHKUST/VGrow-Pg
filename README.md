@@ -246,7 +246,7 @@ We show all dataset final resolution results from each f-divergence.
 ### High resolution generation
 Here we show the high resolution generation results (256x256) based on LSUN (Church) dataset.
 
-![alt text](https://github.com/gefeiwang/PGVGrow/blob/master/examples/churchhigh.png)<br>
+![alt text](https://github.com/YangLabHKUST/VGrow-Pg/blob/master/examples/churchhigh.png)<br>
 
 
 ## Usage 
@@ -283,3 +283,6 @@ The Portrait dataset is available at https://drive.google.com/file/d/1j_a2OXB_2r
 ## Reference
 The implementation is motivated by the projects:
 [1]https://github.com/tkarras/progressive_growing_of_gans
+
+## Developer and Maintainer
+Gefei WANG <gwangas@connect.ust.hk>
