@@ -285,4 +285,9 @@ The implementation is motivated by the projects:
 [1]https://github.com/tkarras/progressive_growing_of_gans
 
 ## Developer and Maintainer
-Gefei WANG <gwangas@connect.ust.hk>
+Gefei WANG, HKUST
+
+## Contact Information
+Please feel free to contact Gefei WANG <gwangas@connect.ust.hk> or Prof. Can YANG <macyang@ust.hk> if any questions.
+
+
