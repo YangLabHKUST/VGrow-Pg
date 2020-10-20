@@ -314,4 +314,4 @@ The Portrait dataset is available at https://drive.google.com/file/d/1j_a2OXB_2r
 Gefei WANG, HKUST
 
 ## Contact Information
-Please feel free to contact Gefei WANG gwangas@connect.ust.hk or Prof. Can YANG macyang@ust.hk if any questions.
+Please feel free to contact Gefei WANG <gwangas@connect.ust.hk> or Prof. Can YANG <macyang@ust.hk> if any questions.
