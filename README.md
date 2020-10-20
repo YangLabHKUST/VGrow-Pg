@@ -103,7 +103,7 @@ We train VGrow-Pg model based on different f-divergence such as KL-divergence, J
 </table>
  -->
 
-<table align='center'>
+<!-- <table align='center'>
 <tr align='center'>
 <td> Resolution </td>
 <td> 4x4 </td>
@@ -145,18 +145,18 @@ We train VGrow-Pg model based on different f-divergence such as KL-divergence, J
 <td> </td>
 </tr>
 </table>
-
+ -->
 ### Other-divergence
 We show all dataset final resolution results from each f-divergence.
 
 <table align='center'>
-<!-- <tr align='center'>
+<tr align='center'>
 <td> </td>
 <td> KL-divergence </td>
 <td> JS-divergence </td>
-<td> Jef-divergence </td>
-<td> LogD-divergence </td>
-</tr> -->
+<td> Jeffreys-divergence </td>
+<td> logD-divergence </td>
+</tr>
 <tr align='center'>
 <td> MNIST </td>
 <td><img src = 'examples/mnist-KL.png' height = '160px'>
@@ -200,54 +200,84 @@ We show all dataset final resolution results from each f-divergence.
 <td> FID: 21.93 </td>
 </tr> -->
 <tr align='center'>
-<td> CelebA </td>
-<td><img src = 'examples/celeba-KL.png' height = '160px'>
-<td><img src = 'examples/celeba-JS.png' height = '160px'>
-<td><img src = 'examples/celeba-Jef.png' height = '160px'>
-<td><img src = 'examples/celeba-LogD.png' height = '160px'>
-</tr>
-<!-- <tr align='center'>
-<td> Score </td>
-<td> FID: 7.21 </td>
-<td> FID: 7.48 </td>
-<td> FID: 6.66 </td>
-<td> FID: 7.89 </td>
-</tr> -->
-<tr align='center'>
 <td> LSUN-Bedroom </td>
 <td><img src = 'examples/bedroom-KL.png' height = '160px'>
 <td><img src = 'examples/bedroom-JS.png' height = '160px'>
 <td><img src = 'examples/bedroom-Jef.png' height = '160px'>
 <td><img src = 'examples/bedroom-LogD.png' height = '160px'>
 </tr>
+</table>
+
+<table align='center'>
+<tr align='center'>
+<td> </td>
+<td> KL-divergence </td>
+<td> JS-divergence </td>
+</tr>
+<tr align='center'>
+<td> CelebA </td>
+<td><img src = 'examples/celeba-KL.png' height = '320px'>
+<td><img src = 'examples/celeba-JS.png' height = '320px'>
+</tr>
+<tr align='center'>
+<td> </td>
+<td> Jeffreys-divergence </td>
+<td> logD-divergence </td>
+</tr>
+<tr align='center'>
+<td> CelebA </td>
+<td><img src = 'examples/celeba-Jef.png' height = '320px'>
+<td><img src = 'examples/celeba-LogD.png' height = '320px'>
+</tr>
+<tr align='center'>
+<td> </td>
+<td> KL-divergence </td>
+<td> JS-divergence </td>
+</tr>
 <tr align='center'>
 <td> LSUN-Church </td>
-<td><img src = 'examples/church-KL.png' height = '160px'>
-<td><img src = 'examples/church-JS.png' height = '160px'>
-<td><img src = 'examples/church-Jef.png' height = '160px'>
-<td><img src = 'examples/church-LogD.png' height = '160px'>
+<td><img src = 'examples/church-KL.png' height = '320px'>
+<td><img src = 'examples/church-JS.png' height = '320px'>
 </tr>
-<!-- <tr align='center'>
-<td> Score </td>
-<td> FID: 15.07 </td>
-<td> FID: 28.43 </td>
-<td> FID: 16.01 </td>
-<td> FID: 13.09 </td>
-</tr> -->
+<tr align='center'>
+<td> </td>
+<td> Jeffreys-divergence </td>
+<td> logD-divergence </td>
+</tr>
+<tr align='center'>
+<td> LSUN-Church </td>
+<td><img src = 'examples/church-Jef.png' height = '320px'>
+<td><img src = 'examples/church-LogD.png' height = '320px'>
+</tr>
+<tr align='center'>
+<td> </td>
+<td> KL-divergence </td>
+<td> JS-divergence </td>
+</tr>
 <tr align='center'>
 <td> Portrait </td>
-<td><img src = 'examples/portrait-KL.png' height = '160px'>
-<td><img src = 'examples/portrait-JS.png' height = '160px'>
-<td><img src = 'examples/portrait-Jef.png' height = '160px'>
-<td><img src = 'examples/portrait-LogD.png' height = '160px'>
+<td><img src = 'examples/portrait-KL.png' height = '320px'>
+<td><img src = 'examples/portrait-JS.png' height = '320px'>
+</tr>
+<tr align='center'>
+<td> </td>
+<td> Jeffreys-divergence </td>
+<td> logD-divergence </td>
+</tr>
+<tr align='center'>
+<td> Portrait </td>
+<td><img src = 'examples/portrait-Jef.png' height = '320px'>
+<td><img src = 'examples/portrait-LogD.png' height = '320px'>
 </tr>
 </table>
 
-### High resolution generation
-Here we show the high resolution generation results (256x256) based on LSUN (Church) dataset.
-
-![alt text](https://github.com/YangLabHKUST/VGrow-Pg/blob/master/examples/churchhigh.png)<br>
-
+### Latent space manipulation
+We first generate 10,000 faces using the network trained with CelebA dataset and KL divergence. We use the age and gender classification networks provided in https://github.com/dpressel/rude-carnie for those generated faces, and then find a latent direction that controls these semantics. For example, we apply a logistic regression for gender and regard the normal of decision boundary as the direction.
+<img height="320px" src = 'examples/gender.png'/>
+### Manipulating gender
+![alt text](examples/gender1.gif)![alt text](examples/gender2.gif)![alt text](examples/gender3.gif)![alt text](examples/gender4.gif)![alt text](examples/gender5.gif)![alt text](examples/gender6.gif)
+### Manipulating age
+![alt text](examples/age1.gif)![alt text](examples/age2.gif)![alt text](examples/age3.gif)![alt text](examples/age4.gif)![alt text](examples/age5.gif)![alt text](examples/age6.gif)
 
 ## Usage 
 ### Command
@@ -280,14 +310,8 @@ We provide all arguments with default value and you can run this program with CI
 ## Link
 The Portrait dataset is available at https://drive.google.com/file/d/1j_a2OXB_2rhaVqojzSPJLv_bDrSjHguR/view?usp=sharing
 
-## Reference
-The implementation is motivated by the projects:
-[1]https://github.com/tkarras/progressive_growing_of_gans
-
 ## Developer and Maintainer
 Gefei WANG, HKUST
 
 ## Contact Information
-Please feel free to contact Gefei WANG <gwangas@connect.ust.hk> or Prof. Can YANG <macyang@ust.hk> if any questions.
-
-
+Please feel free to contact Gefei WANG gwangas@connect.ust.hk or Prof. Can YANG macyang@ust.hk if any questions.
