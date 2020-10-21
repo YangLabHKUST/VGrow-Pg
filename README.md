@@ -13,7 +13,7 @@ A tensorflow implementation of VGrow by using progressive growing method descrip
   * NVIDIA driver 410.93 , CUDA V10.0.130, RTX 2080 Ti
   
 ## Results
-We train VGrow-Pg model based on different f-divergence such as KL-divergence, JS-divergence, Jef-divergence and our new porposed LogD-divergence. Here we only show the complete process of progressive growing based on KL-divergence. 
+We train VGrow-Pg model based on different f-divergence such as KL-divergence, JS-divergence, Jeffreys-divergence and our new proposed logD-divergence. Here we only show the complete process of progressive growing based on KL-divergence. 
 
 <table align='center'>
 <tr align='center'>
